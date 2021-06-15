@@ -1,9 +1,103 @@
+<!DOCTYPE html>
 <html>
+<head>
+	<meta charset="utf-8">
+	<title>lcfnb</title>
+	<style type="text/css">
+		#haha{color: red;text-decoration: underline;}
+		#tu{text-align: right;border: 3px solid red}
+		ul{list-style-type: none;}
+		#div1{background-color: hotpink;}
+		a
+		{
+			color: red;
+			text-decoration: none;
+		}
+		a:hover
+		{
+			color: blue;
+			text-decoration: underline;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function()
+		{
+			alert("欢迎来到lcfnb");
+		}
+		window.onbeforeunload=function(event)
+		{
+			var e=event || window.event;
+			e.returnValue="记得下次再来";
+		}
+		function alertlove()
+		{
+			alert("你膜了lcf一下");
+		}
+		window.onload=function()
+		{
+			var oImg=document.createElement("img");
+			oImg.className='pic';
+			oImg.src="02.png";
+			oImg.width="500";
+			oImg.style.border="1px solid silver";
+			document.body.appendChild(oImg);
+		}
+		window.onload=function()
+		{
+			var oBtn=document.getElementById('btn');
+			oBtn.onclick=function()
+			{
+				var oUl=document.getElementById('list');
+				var oTxt=document.getElementById('txt');
+				var textNode=document.createTextNode(oTxt.value);
+				var oLi=document.createElement('li');
+				oLi.appendChild(textNode);
+				oUl.appendChild(oLi);
+			}
+		}
+	</script>
+</head>
 <body>
-
-<h1>CB的个人网站</h1>
-
-<p>这里目前什么都没有捏</p>
-
+	<div id="div1">
+		<img id="tu" src="01.png" alt="einstein" width="500">
+		<ul type="circle">
+			<li>one gal pic</li>
+			<li>another will be late</li>
+		</ul>
+	</div>
+	<div>
+		<a href="http://www.baidu.com">here is a ex</a>
+	</div>
+	<div>
+		<form name="yyyyyyyyyyyy" method="post">
+			账号：<input type="text"><br/>
+			密码：<input type="password" name="mima"><br>
+			性别：<input type="radio" name="gender" value="男" checked="checked">男
+			<input type="radio" name="gender" value="女">女<br>
+			<input type="button" onclick="alertlove()" name="登录" value="登录">
+			<p id="haha">lcf是什么：</p>
+			<input type="checkbox" name="gal" value="haha">内卷高手
+			<input type="checkbox" name="gal" value="haha1">吊打众人
+			<input type="checkbox" name="gal" value="haha2">无形装逼
+			<input type="checkbox" name="gal" value="haha3">笑考第一<br>
+			<textarea>This is a dual txt sca.</textarea><br/>
+			<select>
+				<option>lcftql</option>
+				<option>snowchord</option>
+				<option>cleveland</option>
+			</select>
+		</form>
+	</div>
+	<div>
+		<iframe src="http://www.baidu.com" width="1000" height="750"></iframe>
+	</div>
+	<div>
+		<ul id="list">
+			<li>海伦娜</li>
+			<li>绫波</li>
+			<li>埃塞克斯</li>
+		</ul>
+		<input id="txt" type="text"><input type="button" id="btn" value="插入">
+	</div>
 </body>
 </html>
